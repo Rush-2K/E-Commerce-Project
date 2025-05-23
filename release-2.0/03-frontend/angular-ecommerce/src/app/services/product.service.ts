@@ -32,6 +32,16 @@ export class ProductService {
       map(response => response._embedded.productCategory)
     )
   }
+
+  searchProducts(theKeyword: string): Observable<Product[]> {
+
+    // build URL based on keyword
+    const searchUrl = `${this.baseUrl}/search/findByNameContaining?name=${theKeyword}`;
+
+    return this.httpClient.get<GetResponseProducts>(searchUrl).pipe(
+      map(response => response._embedded.products)
+    )
+  }
 }
 
 interface GetResponseProductCategory {
