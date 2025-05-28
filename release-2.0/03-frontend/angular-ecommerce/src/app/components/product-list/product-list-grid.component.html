@@ -39,7 +39,7 @@
               <div class="col-md-9" style="padding-left: 30%">
 
                 <ngb-pagination [(page)]="thePageNumber" [pageSize]="thePageSize" [collectionSize]="theTotalElements"
-                  [maxSize]="5" [boundaryLinks]="true" [(pageChange)="listProducts()">
+                  [maxSize]="5" [boundaryLinks]="true" (pageChange)="listProducts()">
 
                 </ngb-pagination>
 
