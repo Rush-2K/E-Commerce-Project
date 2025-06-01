@@ -12,6 +12,9 @@ export class CheckoutComponent implements OnInit{
   // declare form group
   checkOutFormGroup!: FormGroup;
 
+  totalPrice: number = 0;
+  totalQuantity: number = 0;
+
   // inject the form builder
   constructor(private formBuilder: FormBuilder){}
 
