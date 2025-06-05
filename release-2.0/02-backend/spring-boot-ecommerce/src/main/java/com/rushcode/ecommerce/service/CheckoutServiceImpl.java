@@ -28,7 +28,7 @@ public class CheckoutServiceImpl implements CheckoutService {
     public PurchaseResponse placeOrder(Purchase purchase) {
 
         // retrieve the order info from dto
-        Order order = purchase.getOrders();
+        Order order = purchase.getOrder();
 
         // generate tracking number
         String orderTrackingNumber = generateOrderTrackingNumber();
